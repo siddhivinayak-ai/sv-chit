@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    z-index: 1000;
+}
+
+.app-name {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    margin: 0 12px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.search-bar::placeholder {
+    color: #aaa;
+}
+
+.search-bar:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Icons */
+.menu-icon, .back-btn {
+    font-size: 22px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu-icon:hover, .back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Scrollable Content */
+.scrollable-content {
+    margin-top: 60px; /* Adjust for top nav */
+    margin-bottom: 60px; /* Adjust for bottom nav */
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+/* Cards */
+.card {
+    background: #1a1a1a;
+    padding: 18px;
+    margin: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    /* transition: transform 0.3s ease, background 0.3s ease; */
+    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); */
+}
+
+.card:hover {
+    background: #252525;
+    transform: translateY(-5px);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bottom-nav button i {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.bottom-nav button:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 50%;
+    }
+
+    .bottom-nav button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        width: 50%;
+    }
+
+    .bottom-nav button span {
+        display: none;
+    }
+}
